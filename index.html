@@ -7,7 +7,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-/* REGLAS ESTRICTAS PARA PDF / TAMAÑO A4 */
+/* REGLAS ESTRICTAS PARA PDF / TAMAÑO A4 EQUILIBRADO */
 @media print {
     @page { 
         size: A4 portrait; 
@@ -83,17 +83,8 @@
             </svg>
         </div>
 
-        <!-- Superior: Etiquetas y Logo -->
-        <div class="relative z-10 flex justify-between items-start w-full">
-            <div class="space-y-2">
-                <span class="inline-block bg-slate-700 text-slate-200 text-xs font-bold uppercase tracking-widest py-1.5 px-3 rounded print:border print:border-slate-500">
-                    CARÁTULA
-                </span><br>
-                <span class="inline-block bg-red-600 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-4 rounded shadow">
-                    Sujeta a revisión
-                </span>
-            </div>
-            
+        <!-- Superior: Logo -->
+        <div class="relative z-10 flex justify-end items-start w-full">
             <!-- LOGO CLIENTE (JSC) -->
             <div class="w-64 h-32 print:w-56 print:h-28 bg-white rounded-xl p-4 flex items-center justify-center relative group cursor-pointer border-2 border-dashed border-slate-400 hover:border-green-500 transition-colors shadow-lg print:shadow-none print:border-none" onclick="document.getElementById('file-jsc').click()">
                 <img id="img-jsc" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo JSC" class="max-w-full max-h-full object-contain relative z-10">
@@ -105,6 +96,11 @@
         <!-- Central: Títulos Principales -->
         <div class="relative z-10 w-full my-auto py-10 print:py-0">
             <h1 class="text-5xl md:text-6xl font-bold mb-4 print:text-5xl tracking-tight text-white">Propuesta preliminar</h1>
+            <div class="mb-4">
+                <span class="inline-block bg-red-600 text-white text-xs font-bold uppercase tracking-widest py-1.5 px-4 rounded shadow">
+                    Sujeta a revisión
+                </span>
+            </div>
             <h2 class="text-2xl md:text-3xl text-green-400 font-medium tracking-wide print:text-2xl mb-4">Red +VOS de Productores Agroalimentarios Locales</h2>
             <h3 class="text-xl md:text-2xl text-slate-300 font-light print:text-xl mb-8">Cierre de brechas para el ecosistema de abastecimiento de JSC.</h3>
             
@@ -124,7 +120,7 @@
                 </div>
                 <div class="avoid-break">
                     <p class="text-green-400 text-[10px] uppercase font-bold tracking-widest mb-1">Presentada por:</p>
-                    <p class="text-slate-200 font-medium print:text-[11pt] leading-relaxed">Agroconsulta SRL<br>MD Soluciones Sustentables<br>+VOS Sinergia Agro</p>
+                    <p class="text-slate-200 font-medium print:text-[11pt] leading-relaxed">Agroconsulta SRL<br>MD Soluciones Sustentables SAS<br>+VOS Sinergia Agro</p>
                 </div>
                 <div class="avoid-break">
                     <p class="text-green-400 text-[10px] uppercase font-bold tracking-widest mb-1">Responsable de contacto:</p>
@@ -145,7 +141,6 @@
      FIN DE LA CARÁTULA
 =========================================== -->
 
-
 <!-- ==========================================
      INICIO DEL DOCUMENTO PRINCIPAL
 =========================================== -->
@@ -162,10 +157,10 @@
                 <p>La primera etapa buscará identificar el gap entre la oferta local actual o potencial y los estándares requeridos por JSC y sus clientes en materia de calidad, inocuidad, continuidad, logística, formalización, trazabilidad y capacidad de cumplimiento, tomando como referencia criterios compatibles con ISO 9001 y HACCP, cuando corresponda.</p>
                 
                 <div class="mt-4 bg-slate-50 border-l-4 border-slate-600 p-4 rounded-r-lg print:p-3 avoid-break">
-                    <p class="mb-2">Desde <strong>Agroconsulta SRL</strong> y <strong>MD Soluciones Sustentables</strong>, como aliados estratégicos dentro de <strong>+VOS Sinergia Agro</strong>, proponemos aportar capacidades complementarias:</p>
+                    <p class="mb-2">Desde <strong>Agroconsulta SRL</strong> y <strong>MD Soluciones Sustentables SAS</strong>, como aliados estratégicos dentro de <strong>+VOS Sinergia Agro</strong>, proponemos aportar capacidades complementarias:</p>
                     <ul class="list-disc pl-5 space-y-1">
                         <li><strong>Agroconsulta SRL:</strong> lidera el ordenamiento agroproductivo, la relación con productores, la trazabilidad, el cuaderno de campo y el desarrollo progresivo del Sello +VOS.</li>
-                        <li><strong>MD Soluciones Sustentables:</strong> lidera sostenibilidad aplicada, eficiencia, indicadores y futura medición de huella hídrica y huella de carbono.</li>
+                        <li><strong>MD Soluciones Sustentables SAS:</strong> lidera sostenibilidad aplicada, eficiencia, indicadores y futura medición de huella hídrica y huella de carbono.</li>
                     </ul>
                 </div>
 
@@ -189,20 +184,19 @@
         </section>
 
         <!-- 3. OBJETIVOS ESPECÍFICOS -->
-        <!-- Opcional: Se fuerza salto de página aquí para que la lista no empiece apretada -->
         <section class="mb-10 page-break-before">
             <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-xl avoid-break">3. Objetivos Específicos</h3>
             <ul class="space-y-3 text-slate-700 print:text-[11pt] text-justify pl-2">
                 <li><span class="font-bold text-green-600 mr-1">•</span> Identificar proveedores agroalimentarios actuales o potenciales vinculados al ecosistema de abastecimiento de JSC.</li>
                 <li><span class="font-bold text-green-600 mr-1">•</span> Evaluar, junto a JSC, una cadena agroalimentaria piloto para iniciar el proceso de ordenamiento, trazabilidad, buenas prácticas, comunicación mediante QR y validación progresiva.</li>
-                <li><span class="font-bold text-green-600 mr-1">•</span> Relevar estándares requeridos por JSC y sus clientes en calidad, inocuidad, volumen, continuidad, logística, documentación y trazabilidad.</li>
+                <li><span class="font-bold text-green-600 mr-1">•</span> Relevar estándares requeridos por JSC y sus clientes en calidad, inocuidad, volumen, continuity, logística, documentación y trazabilidad.</li>
                 <li><span class="font-bold text-green-600 mr-1">•</span> Analizar el gap entre oferta local disponible y demanda real.</li>
                 <li><span class="font-bold text-green-600 mr-1">•</span> Clasificar productores y proveedores según nivel de madurez, potencial de mejora y necesidades de acompañamiento.</li>
                 <li><span class="font-bold text-green-600 mr-1">•</span> Utilizar REDUS como base inicial de trazabilidad, reducción de residuos, QR e indicadores.</li>
                 <li><span class="font-bold text-green-600 mr-1">•</span> Proponer líneas de capacitación, asistencia técnica, BPA, inocuidad, registros y mejora continua.</li>
-                <li><span class="font-bold text-green-600 mr-1">•</span> Incorporar indicadores de sostenibilidad aplicada junto a MD Soluciones Sustentables.</li>
-                <li><span class="font-bold text-green-600 mr-1">•</span> Construir una base preliminar de información técnica, territorial y trazable que pueda servir como insumo para futuras comunicaciones, reportes o indicadores vinculados a ESG, desarrollo de proveedores locales y sostenibilidad aplicada.</li>
-                <li><span class="font-bold text-green-600 mr-1">•</span> Diseñar una hoja de ruta preliminar hacia el Sello +VOS, sitio web y aplicación/cuaderno de campo.</li>
+                <li><span class="font-bold text-green-600 mr-1">•</span> Incorporar indicadores de sostenibilidad aplicada junto a MD Soluciones Sustentables SAS.</li>
+                <li><span class="font-bold text-blue-600 mr-1">•</span> Construir una base preliminar de información técnica, territorial y trazable que pueda servir como insumo para futuras comunicaciones, reportes o indicadores vinculados a ESG, desarrollo de proveedores locales y sostenibilidad aplicada.</li>
+                <li><span class="font-bold text-blue-600 mr-1">•</span> Diseñar una hoja de ruta preliminar hacia el Sello +VOS, sitio web y aplicación/cuaderno de campo.</li>
                 <li><span class="font-bold text-blue-600 mr-1">•</span> Identificar oportunidades de mejora, factores comunes de debilidad y necesidades compartidas dentro de la comunidad de productores, con el objetivo de formular un programa de crédito, cooperación técnica o financiamiento que permita fortalecer la cadena de productores, proveedores y actores locales.</li>
                 <li><span class="font-bold text-blue-600 mr-1">•</span> Cooperar y acompañar la gestión de financiamiento ante entidades financieras, instituciones públicas, organismos de cooperación técnica nacional o internacional y herramientas vinculadas al desarrollo de proveedores.</li>
                 <li><span class="font-bold text-blue-600 mr-1">•</span> Acompañar, en caso de que JSC lo considere oportuno, sus programas de capacitación de jóvenes y fortalecimiento de capacidades locales. El alcance, modalidad y currícula de eventuales cursos o talleres serán coordinados oportunamente con JSC dentro del plan operativo de detalle.</li>
@@ -210,7 +204,7 @@
         </section>
 
         <!-- 4. RESULTADOS ESPERADOS -->
-        <section class="mb-10">
+        <section class="mb-10 page-break-before">
             <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-xl avoid-break">4. Resultados Esperados</h3>
             <p class="text-slate-700 mb-4 print:text-[11pt] avoid-break">Al finalizar esta primera etapa, se espera entregar a JSC:</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700 print:text-[11pt] text-justify">
@@ -219,15 +213,15 @@
                 <div class="tarjeta bg-slate-50 p-4 rounded border print:p-3"><span class="font-bold text-green-600 mr-1">•</span> Identificación de rubros prioritarios con potencial de desarrollo local, considerando demanda real, posibilidad de sustitución de proveedores externos, valor agregado y factibilidad técnica.</div>
                 <div class="tarjeta bg-slate-50 p-4 rounded border print:p-3"><span class="font-bold text-green-600 mr-1">•</span> Líneas de fortalecimiento técnico, incluyendo capacitación, asistencia, registros, BPA, trazabilidad, reducción de residuos, formalización e inocuidad.</div>
                 <div class="tarjeta bg-slate-50 p-4 rounded border print:p-3"><span class="font-bold text-green-600 mr-1">•</span> Esquema preliminar de trazabilidad y validación, tomando REDUS como herramienta inicial y proyectando una evolución hacia QR, indicadores, validación externa y Sello +VOS.</div>
-                <div class="tarjeta bg-slate-50 p-4 rounded border print:p-3"><span class="font-bold text-green-600 mr-1">•</span> Base preliminar de información ESG y trazabilidad, orientada a ordenar datos de proveedores, brechas, indicadores, acciones de mejora y evidencia verificable para futuras comunicaciones o reportes de sostenibilidad.</div>
+                <div class="tarjeta bg-blue-50 p-4 rounded border border-blue-200 print:p-3"><span class="font-bold text-blue-600 mr-1">•</span> Base preliminar de información ESG y trazabilidad, orientada a ordenar datos de proveedores, brechas, indicadores, acciones de mejora y evidencia verificable para futuras comunicaciones o reportes de sostenibilidad.</div>
                 <div class="tarjeta bg-slate-50 p-4 rounded border print:p-3"><span class="font-bold text-green-600 mr-1">•</span> Presupuesto preliminar de fortalecimiento de cadena, con posibles subproyectos o actividades financiables.</div>
-                <div class="tarjeta bg-slate-50 p-4 rounded border print:p-3"><span class="font-bold text-green-600 mr-1">•</span> Modelo preliminar de gestión entre productores, Agroconsulta, MD Soluciones Sustentables, +VOS, JSC y cliente minero.</div>
+                <div class="tarjeta bg-slate-50 p-4 rounded border print:p-3"><span class="font-bold text-green-600 mr-1">•</span> Modelo preliminar de gestión entre productores, Agroconsulta, MD Soluciones Sustentables SAS, +VOS, JSC y cliente minero.</div>
                 <div class="tarjeta bg-slate-50 p-4 rounded border print:p-3"><span class="font-bold text-green-600 mr-1">•</span> Identificación de posibles fuentes de financiamiento y cooperación técnica, orientadas a fortalecer subproyectos vinculados a productores, proveedores, trazabilidad, capacitación, validación y desarrollo territorial.</div>
-                <div class="tarjeta bg-slate-50 p-4 rounded border print:p-3"><span class="font-bold text-green-600 mr-1">•</span> Propuesta preliminar de articulación con programas de capacitación local, en caso de que JSC decida integrar esta línea dentro de su estrategia ESG y de desarrollo territorial.</div>
+                <div class="tarjeta bg-blue-50 p-4 rounded border border-blue-200 print:p-3"><span class="font-bold text-blue-600 mr-1">•</span> Propuesta preliminar de articulación con programas de capacitación local, en caso de que JSC decida integrar esta línea dentro de su estrategia ESG y de desarrollo territorial.</div>
             </div>
         </section>
 
-        <!-- 5. PLAN ORIENTATIVO (Forzar nueva página) -->
+        <!-- 5. PLAN ORIENTATIVO -->
         <section class="mb-10 page-break-before">
             <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-xl avoid-break">5. Plan Orientativo</h3>
             <p class="text-slate-700 mb-6 text-justify print:text-[11pt] avoid-break">El presente plan se propone como una estructura orientativa inicial. Para este Nivel 1 se han definido fases preliminares de trabajo, cuyas actividades específicas serán oportunamente detalladas y analizadas en conjunto con JSC, quedando sujetas a revisión según alcance, información disponible, cadena piloto seleccionada y requerimientos del cliente.</p>
@@ -259,81 +253,25 @@
                 </div>
             </div>
 
-            <!-- Tabla Cronograma 5 meses -->
-            <div class="mt-6 avoid-break">
-                <h4 class="font-bold text-slate-800 mb-1">Duración estimada preliminar</h4>
-                <p class="text-sm text-slate-600 mb-3 print:text-[11pt]">Duración estimada: 5 meses, sujeta a definición final de alcance con JSC.</p>
+            <!-- Lista Cronograma Simplificada (Reemplaza a la tabla para evitar cortes) -->
+            <div class="mt-6 avoid-break bg-slate-50 border border-slate-200 p-5 rounded-xl print:p-4">
+                <h4 class="font-bold text-slate-800 mb-2">Duración estimada preliminar</h4>
+                <p class="text-sm text-slate-600 mb-4 print:text-[11pt]">Duración estimada: <strong>5 meses</strong>, sujeta a definición final de alcance con JSC.</p>
                 
-                <div class="overflow-x-auto rounded-lg border border-slate-300">
-                    <table class="w-full text-left border-collapse text-sm print:text-[10pt]">
-                        <thead>
-                            <tr class="bg-slate-100 border-b border-slate-300 text-slate-800">
-                                <th class="py-2 px-3 font-bold">Fase</th>
-                                <th class="py-2 px-2 font-bold text-center border-l border-slate-300 w-12">Mes 1</th>
-                                <th class="py-2 px-2 font-bold text-center border-l border-slate-300 w-12">Mes 2</th>
-                                <th class="py-2 px-2 font-bold text-center border-l border-slate-300 w-12">Mes 3</th>
-                                <th class="py-2 px-2 font-bold text-center border-l border-slate-300 w-12">Mes 4</th>
-                                <th class="py-2 px-2 font-bold text-center border-l border-slate-300 w-12">Mes 5</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-slate-700">
-                            <tr class="border-b border-slate-200 avoid-break">
-                                <td class="py-2 px-3">Fase 1 — Alineación con JSC</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                            </tr>
-                            <tr class="border-b border-slate-200 avoid-break">
-                                <td class="py-2 px-3">Fase 2 — Demanda y estándares</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                            </tr>
-                            <tr class="border-b border-slate-200 avoid-break">
-                                <td class="py-2 px-3">Fase 3 — Oferta local</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                            </tr>
-                            <tr class="border-b border-slate-200 avoid-break">
-                                <td class="py-2 px-3">Fase 4 — Identificación del gap</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                            </tr>
-                            <tr class="border-b border-slate-200 avoid-break">
-                                <td class="py-2 px-3">Fase 5 — Plan de fortalecimiento</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                            </tr>
-                            <tr class="avoid-break">
-                                <td class="py-2 px-3">Fase 6 — Devolución ejecutiva</td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200"></td>
-                                <td class="py-2 px-2 text-center border-l border-slate-200 font-bold bg-slate-200/50">X</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700 print:text-[11pt]">
+                    <li><span class="font-bold text-slate-800">Fase 1 — Alineación con JSC:</span> Desarrollo durante el Mes 1.</li>
+                    <li><span class="font-bold text-slate-800">Fase 2 — Demanda y estándares:</span> Desarrollo durante los Meses 1 y 2.</li>
+                    <li><span class="font-bold text-slate-800">Fase 3 — Oferta local:</span> Desarrollo durante los Meses 1 y 2.</li>
+                    <li><span class="font-bold text-slate-800">Fase 4 — Identificación del gap:</span> Desarrollo durante los Meses 3 y 4.</li>
+                    <li><span class="font-bold text-slate-800">Fase 5 — Plan de fortalecimiento:</span> Desarrollo durante los Meses 4 y 5.</li>
+                    <li><span class="font-bold text-slate-800">Fase 6 — Devolución ejecutiva:</span> Presentación en el Mes 5.</li>
+                </ul>
             </div>
         </section>
 
         <!-- 6. PERSONAL ASIGNADO -->
         <section class="mb-10 page-break-before">
-            <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-xl avoid-break">6. Personal de Agroconsulta SRL y MD Soluciones Sustentables asignado al proyecto Nivel 1</h3>
+            <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-xl avoid-break">6. Personal de Agroconsulta SRL y MD Soluciones Sustentables SAS asignado al proyecto Nivel 1</h3>
             <p class="text-slate-700 mb-4 print:text-[11pt] text-justify avoid-break">El equipo asignado al Nivel 1 será definido en función del alcance final acordado con JSC. De manera preliminar, se contemplan los siguientes perfiles y responsabilidades:</p>
 
             <ul class="space-y-3 text-slate-700 print:text-[11pt] pl-2 text-justify">
@@ -343,62 +281,137 @@
                 <li><span class="font-bold text-slate-800">Especialista en sostenibilidad e indicadores:</span> definición de indicadores preliminares, eficiencia, sostenibilidad aplicada y futuras métricas de huella hídrica y huella de carbono.</li>
                 <li><span class="font-bold text-slate-800">Soporte de datos y sistematización:</span> organización de información, matrices de brechas, scoring y preparación de insumos para toma de decisiones.</li>
                 <li><span class="font-bold text-slate-800">Apoyo administrativo y logístico:</span> agenda, coordinación de reuniones, salidas territoriales, documentación y soporte operativo.</li>
-                <li><span class="font-bold text-slate-800">Perfiles locales o jóvenes en formación:</span> en caso de que JSC lo considere oportuno, podrán incorporarse progresivamente perfiles locales, estudiantes o jóvenes del territorio como apoyo a tareas de relevamiento, registros, capacitación y fortalecimiento de capacidades. Esta línea deberá coordinarse con JSC dentro del plan operativo de detalle.</li>
+                <li><span class="font-bold text-blue-700">Perfiles locales o jóvenes en formación:</span> en caso de que JSC lo considere oportuno, podrán incorporarse progresivamente perfiles locales, estudiantes o jóvenes del territorio como apoyo a tareas de relevamiento, registros, capacitación y fortalecimiento de capacidades. Esta línea deberá coordinarse con JSC dentro del plan operativo de detalle.</li>
             </ul>
         </section>
 
-        <!-- 7. ALCANCE PRESUPUESTARIO -->
-        <section class="mb-10 avoid-break">
-            <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-xl">7. Alcance presupuestario y próximos pasos</h3>
-            <p class="text-slate-700 mb-4 print:text-[11pt] text-justify">La presente propuesta no incluye una cotización económica cerrada. Su objetivo es presentar el enfoque general, los objetivos, el plan orientativo y las capacidades disponibles para evaluar junto a JSC la pertinencia, alcance y prioridad del programa.</p>
-            <p class="text-slate-700 mb-4 print:text-[11pt] text-justify">Una vez concretada una primera reunión de alineación con JSC, y luego de revisar conjuntamente prioridades, información disponible, cadena agroalimentaria piloto, requerimientos del cliente y nivel de profundidad esperado, Agroconsulta SRL y MD Soluciones Sustentables podrán presentar un presupuesto detallado para el Nivel 1 — Diagnóstico y diseño del programa.</p>
-            
-            <p class="text-slate-700 mb-2 font-bold print:text-[11pt]">Dicho presupuesto podrá contemplar, según el alcance finalmente acordado:</p>
-            <ul class="list-disc pl-5 space-y-1 text-slate-700 mb-4 print:text-[11pt] columns-1 md:columns-2">
-                <li>actividades específicas por fase;</li>
-                <li>perfiles profesionales involucrados;</li>
-                <li>salidas territoriales necesarias;</li>
-                <li>viáticos, movilidad y gastos operativos;</li>
-                <li>entregables esperados;</li>
-                <li>tiempos de ejecución;</li>
-                <li>condiciones comerciales;</li>
-                <li>eventuales costos de terceros o validaciones externas;</li>
-                <li>alcance del posterior Nivel 2 de implementación.</li>
-            </ul>
-
-            <p class="text-slate-700 mb-2 font-bold print:text-[11pt]">El Nivel 2 — Trabajo de campo e implementación progresiva será presupuestado por separado una vez finalizado el Nivel 1 y definido el alcance de implementación. Podrá incluir, entre otros componentes:</p>
-            <ul class="list-disc pl-5 space-y-1 text-slate-700 print:text-[11pt] columns-1 md:columns-2">
-                <li>visitas a productores;</li>
-                <li>movilidad y viáticos;</li>
-                <li>materiales de trabajo;</li>
-                <li>capacitaciones;</li>
-                <li>asistencia técnica;</li>
-                <li>implementación REDUS;</li>
-                <li>trazabilidad y QR;</li>
-                <li>incentivos a productores;</li>
-                <li>acciones de marketing;</li>
-                <li>auditorías o validaciones;</li>
-                <li>indicadores de sostenibilidad;</li>
-                <li>herramientas digitales;</li>
-                <li>app/cuaderno de campo;</li>
-                <li>sitio web +VOS;</li>
-                <li>acompañamiento técnico;</li>
-                <li>articulación con Food Safety.</li>
-            </ul>
-        </section>
-
-        <!-- 8. CONDICIONES PRELIMINARES -->
+        <!-- 7. OFERTA ECONÓMICA -->
         <section class="mb-10 page-break-before">
-            <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-xl avoid-break">8. Condiciones preliminares</h3>
+            <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-xl avoid-break">7. Oferta económica preliminar</h3>
+            <p class="text-slate-700 mb-4 print:text-[11pt] text-justify">La presente propuesta incorpora una oferta económica preliminar para el Nivel 1 — Diagnóstico y diseño del programa, sujeta a revisión y ajuste conforme el alcance definitivo que se acuerde con JSC.</p>
+            <p class="text-slate-700 mb-6 print:text-[11pt] text-justify">El valor fue estimado considerando las fases preliminares del Nivel 1, perfiles profesionales asignados, dedicación técnica, coordinación general, salidas territoriales, viáticos de traslado, hospedaje, sistematización de información, entregables previstos e impuestos internos asociados a la prestación del servicio.</p>
+            
+            <div class="bg-white border-2 border-slate-800 rounded-xl p-6 shadow-sm print:p-5 mb-8 avoid-break">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-4 border-b border-slate-200 pb-4">
+                    <h4 class="text-lg font-bold text-slate-800 mb-2 md:mb-0">Valor preliminar Nivel 1 — Diagnóstico y diseño del programa</h4>
+                    <span class="text-2xl font-bold text-blue-700">USD 17.134,32 <span class="text-sm font-normal text-slate-600">+ IVA</span></span>
+                </div>
+                <p class="text-sm text-slate-600 italic">El presupuesto alcanza las fases previstas para el Nivel 1, cuyas actividades específicas serán oportunamente detalladas y analizadas en conjunto con JSC dentro del plan operativo de trabajo.</p>
+            </div>
+
+            <!-- Tabla de Dedicación -->
+            <div class="avoid-break mb-8">
+                <h4 class="font-bold text-slate-800 mb-2">Dedicación profesional estimada por perfil</h4>
+                <div class="overflow-hidden rounded-lg border border-slate-300">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-100 border-b border-slate-300 text-slate-800">
+                                <th class="py-2 px-3 font-bold border-r border-slate-300">Perfil asignado</th>
+                                <th class="py-2 px-3 font-bold">Dedicación estimada</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-700">
+                            <tr class="border-b border-slate-200">
+                                <td class="py-2 px-3 border-r border-slate-200 font-medium">Senior Agroconsulta</td>
+                                <td class="py-2 px-3">113 horas</td>
+                            </tr>
+                            <tr class="border-b border-slate-200">
+                                <td class="py-2 px-3 border-r border-slate-200 font-medium">Semi junior Agroconsulta</td>
+                                <td class="py-2 px-3">68 horas</td>
+                            </tr>
+                            <tr class="border-b border-slate-200">
+                                <td class="py-2 px-3 border-r border-slate-200 font-medium">Junior Agroconsulta</td>
+                                <td class="py-2 px-3">270 horas</td>
+                            </tr>
+                            <tr class="border-b border-slate-200">
+                                <td class="py-2 px-3 border-r border-slate-200 font-medium">Senior MD Soluciones Sustentables SAS</td>
+                                <td class="py-2 px-3">30 horas</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 border-r border-slate-200 font-medium">Junior MD Soluciones Sustentables SAS</td>
+                                <td class="py-2 px-3">50 horas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-xs text-slate-500 mt-2 italic text-justify">La dedicación profesional indicada corresponde a una estimación preliminar para dimensionar el Nivel 1. La distribución final de perfiles y tareas podrá ajustarse según el alcance definitivo acordado con JSC.</p>
+            </div>
+
+            <!-- Viáticos -->
+            <div class="avoid-break mb-8">
+                <h4 class="font-bold text-slate-800 mb-2">Viáticos, traslados y hospedaje incluidos</h4>
+                <p class="text-sm text-slate-700 mb-2 text-justify">El valor preliminar incluye, como base de cálculo, viáticos de traslado y hospedaje asociados al desarrollo del Nivel 1, considerando:</p>
+                <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700 mb-3">
+                    <li>traslados territoriales necesarios para el relevamiento y validación inicial;</li>
+                    <li>hospedaje del equipo asignado, cuando la agenda operativa lo requiera;</li>
+                    <li>gastos operativos básicos vinculados a comidas/refrigerios de trabajo;</li>
+                    <li>movilidad necesaria para cumplir las fases preliminares previstas.</li>
+                </ul>
+                <p class="text-xs text-slate-500 italic text-justify">Estos conceptos serán revisados y ajustados con JSC conforme el plan operativo de detalle, especialmente si se modifican la localización de los proveedores, la cantidad de salidas territoriales, los días de estadía o el alcance del relevamiento.</p>
+            </div>
+
+            <!-- Alcance incluido Nivel 1 -->
+            <div class="avoid-break mb-8">
+                <h4 class="font-bold text-slate-800 mb-2">Alcance del Nivel 1 incluido en el presupuesto</h4>
+                <p class="text-sm text-slate-700 mb-2">El Nivel 1 incluye:</p>
+                <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700 columns-1 md:columns-2">
+                    <li>reuniones de alineación;</li>
+                    <li>revisión de información existente;</li>
+                    <li>definición de prioridades y criterios de selección de cadena piloto;</li>
+                    <li>relevamiento inicial de estándares;</li>
+                    <li>diagnóstico preliminar de brechas;</li>
+                    <li>análisis de oferta local actual o potencial;</li>
+                    <li>diseño del esquema de trabajo;</li>
+                    <li>hoja de ruta inicial;</li>
+                    <li>base preliminar de información técnica, territorial y trazable;</li>
+                    <li>presupuesto preliminar de fortalecimiento;</li>
+                    <li>informe ejecutivo para toma de decisiones.</li>
+                </ul>
+                <p class="text-sm text-slate-600 mt-3 pt-3 border-t border-slate-200 italic">Este primer nivel tiene como objetivo ordenar el alcance real del programa, dimensionar necesidades y definir con mayor precisión las acciones posteriores.</p>
+            </div>
+
+            <!-- Nivel 2 -->
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-5 avoid-break">
+                <h4 class="font-bold text-blue-900 text-base mb-2">Nivel 2 — Trabajo de campo e implementación progresiva</h4>
+                <p class="text-sm text-blue-800 mb-3 text-justify">El Nivel 2 — Trabajo de campo e implementación progresiva será presupuestado por separado una vez finalizado el Nivel 1 y definido el alcance de implementación.<br>Podrá incluir, entre otros componentes:</p>
+                <div class="grid grid-cols-2 gap-x-2">
+                    <ul class="list-disc pl-5 space-y-1 text-sm text-blue-800">
+                        <li>visitas adicionales a productores;</li>
+                        <li>movilidad y viáticos adicionales;</li>
+                        <li>materiales de trabajo;</li>
+                        <li>capacitaciones;</li>
+                        <li>asistencia técnica;</li>
+                        <li>implementación REDUS;</li>
+                        <li>trazabilidad y QR;</li>
+                        <li>incentivos a productores;</li>
+                    </ul>
+                    <ul class="list-disc pl-5 space-y-1 text-sm text-blue-800">
+                        <li>acciones de marketing;</li>
+                        <li>auditorías o validaciones;</li>
+                        <li>indicadores de sostenibilidad;</li>
+                        <li>herramientas digitales;</li>
+                        <li>app/cuaderno de campo;</li>
+                        <li>sitio web +VOS;</li>
+                        <li>acompañamiento técnico;</li>
+                        <li>articulación con Food Safety.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONDICIONES COMERCIALES PRELIMINARES -->
+        <section class="mb-10 page-break-before">
+            <h3 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-xl avoid-break">8. Condiciones comerciales preliminares</h3>
             <div class="bg-white border border-slate-200 p-5 rounded-xl print:border-none print:p-0">
                 <ul class="space-y-3 text-slate-700 print:text-[11pt] text-justify pl-2">
-                    <li><span class="font-bold text-slate-400 mr-1">•</span> Esta propuesta tiene carácter preliminar y se encuentra sujeta a revisión.</li>
-                    <li><span class="font-bold text-slate-400 mr-1">•</span> Las actividades específicas de cada fase serán oportunamente detalladas y analizadas en conjunto con JSC dentro del plan operativo de trabajo.</li>
-                    <li><span class="font-bold text-slate-400 mr-1">•</span> Cualquier modificación en alcance, cantidad de productores/proveedores, cadena piloto, viajes, entregables, requerimientos adicionales o necesidades de validación podrá implicar revisión y actualización del presupuesto.</li>
-                    <li><span class="font-bold text-slate-400 mr-1">•</span> Los viáticos, movilidad, alojamiento, comidas, materiales de campo y otros gastos operativos serán definidos y presupuestados según el plan operativo acordado.</li>
-                    <li><span class="font-bold text-slate-400 mr-1">•</span> La propuesta no incluye auditorías externas, certificaciones formales, análisis de laboratorio, desarrollos digitales específicos, cursos, talleres ni inversiones productivas, salvo que sean incorporadas expresamente en un alcance posterior.</li>
-                    <li><span class="font-bold text-slate-400 mr-1">•</span> En caso de que JSC decida avanzar con programas de capacitación local, el alcance, modalidad, currícula y costos asociados deberán definirse y presupuestarse por separado.</li>
-                    <li><span class="font-bold text-slate-400 mr-1">•</span> La contratación, forma de pago, moneda de referencia, tipo de cambio aplicable y condiciones comerciales finales serán definidos en la instancia presupuestaria posterior a la primera reunión de alineación.</li>
+                    <li class="avoid-break"><span class="font-bold text-slate-400 mr-1">•</span> La presente propuesta tiene carácter preliminar y se encuentra sujeta a revisión según el alcance final acordado con JSC.</li>
+                    <li class="avoid-break"><span class="font-bold text-slate-400 mr-1">•</span> El valor indicado corresponde al Nivel 1 — Diagnóstico y diseño del programa y se expresa en dólares estadounidenses (USD), más IVA.</li>
+                    <li class="avoid-break"><span class="font-bold text-slate-400 mr-1">•</span> El valor incluye la dedicación profesional estimada, las fases preliminares del Nivel 1, viáticos de traslado y hospedaje considerados en la base de cálculo inicial.</li>
+                    <li class="avoid-break"><span class="font-bold text-slate-400 mr-1">•</span> Cualquier modificación en el alcance, cantidad de productores/proveedores, cadena piloto, viajes, estadías, entregables o requerimientos adicionales podrá implicar revisión y actualización del presupuesto.</li>
+                    <li class="avoid-break"><span class="font-bold text-slate-400 mr-1">•</span> La propuesta no incluye auditorías externas, certificaciones formales, análisis de laboratorio, desarrollos digitales específicos, cursos, talleres ni inversiones productivas, salvo que sean incorporados expresamente en un alcance posterior.</li>
+                    <li class="avoid-break"><span class="font-bold text-slate-400 mr-1">•</span> La contratación se instrumentará mediante orden de compra emitida a Agroconsulta SRL, MD Soluciones Sustentables SAS o a quien se defina según la estructura comercial acordada entre las partes.</li>
+                    <li class="avoid-break"><span class="font-bold text-slate-400 mr-1">•</span> Se propone un anticipo del 20% contra emisión de la orden de compra. El saldo restante se facturará contra aprobación de entregables, según el plan operativo acordado.</li>
+                    <li class="avoid-break"><span class="font-bold text-slate-400 mr-1">•</span> Forma de pago sugerida: 30 días corridos desde la emisión de la factura.</li>
                 </ul>
             </div>
         </section>
@@ -407,7 +420,7 @@
         <section class="mb-10 avoid-break">
             <h3 class="text-xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4 print:text-lg">9. Criterio de programa único</h3>
             <div class="bg-blue-50 border border-blue-200 p-5 rounded-xl text-blue-900 text-justify">
-                <p class="mb-3">El programa se plantea como una iniciativa única dentro de +VOS Sinergia Agro, articulada por Agroconsulta SRL, MD Soluciones Sustentables y otros actores estratégicos de la red.</p>
+                <p class="mb-3">El programa se plantea como una iniciativa única dentro de +VOS Sinergia Agro, articulada por Agroconsulta SRL, MD Soluciones Sustentables SAS y otros actores estratégicos de la red.</p>
                 <p class="mb-3">Aunque puedan intervenir distintas empresas, especialistas o herramientas, el modelo deberá funcionar como un programa coordinado, evitando esfuerzos dispersos y asegurando una lógica común de:</p>
                 <ul class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm font-bold">
                     <li>• trazabilidad;</li>
@@ -439,7 +452,7 @@
                     
                     <div class="tarjeta bg-white border border-slate-300 rounded-lg p-5 shadow-sm print:shadow-none">
                         <h4 class="font-bold text-slate-800 mb-2">Anexo 2 — Visión Estratégica Agroconsulta / +VOS Sinergia Agro</h4>
-                        <p class="text-sm text-slate-600 mb-3 text-justify">Presentación breve de Agroconsulta SRL, MD Soluciones Sustentables y +VOS Sinergia Agro como comunidad de empresas, productores y capacidades técnicas orientadas a trazabilidad, buenas prácticas, sostenibilidad aplicada, validación, información ESG y generación de valor.</p>
+                        <p class="text-sm text-slate-600 mb-3 text-justify">Presentación breve de Agroconsulta SRL, MD Soluciones Sustentables SAS y +VOS Sinergia Agro como comunidad de empresas, productores y capacidades técnicas orientadas a trazabilidad, buenas prácticas, sostenibilidad aplicada, validación, información ESG y generación de valor.</p>
                         <div class="bg-slate-50 p-3 rounded text-sm text-slate-800 border-l-2 border-slate-400 text-justify">
                             <strong>Mensaje clave:</strong> +VOS Sinergia Agro busca ordenar capacidades territoriales bajo una lógica común de trazabilidad, validación, indicadores, desarrollo local y generación de valor para productores, empresas, clientes y compradores estratégicos.
                         </div>
@@ -447,28 +460,28 @@
                 </div>
             </section>
 
-            <!-- ZÓCALO DE LOGOS -->
+            <!-- ZÓCALO DE LOGOS CON FONDO OSCURO -->
             <section class="pt-4 pb-2">
-                <div class="bg-slate-800 rounded-xl shadow-md overflow-hidden print:shadow-none print:border-slate-800 print:border">
-                    <div class="bg-slate-50 p-8 print:p-6 flex flex-col sm:flex-row justify-center items-center gap-8 md:gap-12 print:gap-8 print:flex-row">
+                <div class="bg-slate-900 rounded-xl shadow-md overflow-hidden print:shadow-none print:bg-slate-900 print:border">
+                    <div class="p-8 print:p-6 flex flex-col sm:flex-row justify-center items-center gap-8 md:gap-12 print:gap-8 print:flex-row">
                         <!-- Logo +VOS -->
-                        <div class="w-40 h-24 print:w-32 print:h-20 relative group cursor-pointer rounded-lg border-2 border-dashed border-slate-300 hover:border-slate-500 flex items-center justify-center print:border-none print:bg-transparent" onclick="document.getElementById('file-vos').click()">
+                        <div class="w-40 h-24 print:w-32 print:h-20 relative group cursor-pointer rounded-lg border border-dashed border-slate-500 hover:border-slate-300 flex items-center justify-center print:border-none print:bg-transparent" onclick="document.getElementById('file-vos').click()">
                             <img id="img-vos" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo +VOS Sinergia Agro" class="max-w-full max-h-full object-contain p-2 relative z-10">
-                            <span class="absolute text-slate-400 text-xs text-center z-0 group-hover:hidden print:hidden">Logo +VOS</span>
+                            <span class="absolute text-slate-400 text-xs text-center z-0 group-hover:hidden print:hidden">Logo +VOS<br>(Letras Blancas)</span>
                             <input type="file" id="file-vos" class="hidden" accept="image/*" onchange="previewImage(event, 'img-vos')">
                         </div>
 
                         <!-- Logo Agroconsulta -->
-                        <div class="w-40 h-24 print:w-32 print:h-20 relative group cursor-pointer rounded-lg border-2 border-dashed border-slate-300 hover:border-slate-500 flex items-center justify-center print:border-none print:bg-transparent" onclick="document.getElementById('file-agro').click()">
+                        <div class="w-40 h-24 print:w-32 print:h-20 relative group cursor-pointer rounded-lg border border-dashed border-slate-500 hover:border-slate-300 flex items-center justify-center print:border-none print:bg-transparent" onclick="document.getElementById('file-agro').click()">
                             <img id="img-agro" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo Agroconsulta" class="max-w-full max-h-full object-contain p-2 relative z-10">
-                            <span class="absolute text-slate-400 text-xs text-center z-0 group-hover:hidden print:hidden">Logo Agroconsulta</span>
+                            <span class="absolute text-slate-400 text-xs text-center z-0 group-hover:hidden print:hidden">Logo Agroconsulta<br>(Letras Blancas)</span>
                             <input type="file" id="file-agro" class="hidden" accept="image/*" onchange="previewImage(event, 'img-agro')">
                         </div>
 
                         <!-- Logo MD Soluciones -->
-                        <div class="w-40 h-24 print:w-32 print:h-20 relative group cursor-pointer rounded-lg border-2 border-dashed border-slate-300 hover:border-slate-500 flex items-center justify-center print:border-none print:bg-transparent" onclick="document.getElementById('file-md').click()">
-                            <img id="img-md" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo MD Soluciones Sustentables" class="max-w-full max-h-full object-contain p-2 relative z-10">
-                            <span class="absolute text-slate-400 text-xs text-center z-0 group-hover:hidden print:hidden">Logo MD Soluciones</span>
+                        <div class="w-40 h-24 print:w-32 print:h-20 relative group cursor-pointer rounded-lg border border-dashed border-slate-500 hover:border-slate-300 flex items-center justify-center print:border-none print:bg-transparent bg-white/5" onclick="document.getElementById('file-md').click()">
+                            <img id="img-md" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo MD Soluciones Sustentables SAS" class="max-w-full max-h-full object-contain p-2 relative z-10">
+                            <span class="absolute text-slate-400 text-xs text-center z-0 group-hover:hidden print:hidden">Logo MD<br>Soluciones</span>
                             <input type="file" id="file-md" class="hidden" accept="image/*" onchange="previewImage(event, 'img-md')">
                         </div>
                     </div>
